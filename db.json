@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPad 10 (Wi-Fi, 128 GB) - Space Gray",
+      "price": 3600,
+      "pictures": ["./assets/imgs/ipad_10.jpeg"],
+      "description": "O novo iPad tem design todo tela, chip A14 Bionic, câmera frontal horizontal e quatro cores. Compatível com o Apple Pencil e o Magic Keyboard Folio.",
+      "quantity": 10
+    },
+    {
+      "id": 2,
+      "name": "iPad 9 (Wi-Fi, 256 GB) - Silver",
+      "price": 2800,
+      "pictures": ["./assets/imgs/ipad_9.jpeg"],
+      "description": "O iPad (9ª geração) vem com chip A13 Bionic, câmera frontal ultra-angular de 12 MP com Palco Central, tela TrueTone e 64 GB de armazenamento.",
+      "quantity": 5
+    },
+    {
+      "id": 3,
+      "name": "iPad Air 5 (Wi-Fi, 64 GB) - Space Gray",
+      "price": 3999,
+      "pictures": ["./assets/imgs/ipad_air_5.jpeg"],
+      "description": "Novo iPad Air. Design sem bordas, tela de 10,9 polegadas, chip M1, Palco Central, cinco cores e compatível com Apple Pencil e Magic Keyboard.",
+      "quantity": 15
+    },
+    {
+      "id": 4,
+      "name": "iPad Mini 6 (Wi-Fi, 64 GB) - Silver",
+      "price": 3700,
+      "pictures": ["./assets/imgs/ipad_mini.jpeg"],
+      "description": "O iPad mini foi criado para ser lindo nos mínimos detalhes. A estrutura é totalmente nova, com tela de ponta a ponta, bordas estreitas e cantos arredondados. A tela Liquid Retina de 8,3 polegadas tem True Tone.",
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "name": "iPad Pro 11 (Wi-Fi, 128 GB) - Space Gray",
+      "price": 4200,
+      "pictures": ["./assets/imgs/ipad_pro_11.jpeg"],
+      "description": "O iPad Pro vem com o desempenho fora de série do chip M1 da Apple e bateria para o dia todo. A tela Liquid Retina do modelo de 11 polegadas é linda e portátil. O recurso Palco Central na câmera frontal se ajusta automaticamente e mantém você no centro da imagem nas chamadas de vídeo. O iPad Pro tem câmeras Pro e Scanner LIDAR, para fazer fotos e vídeos excelentes e ver em realidade aumentada. A porta Thunderbolt abre um leque para conectar acessórios de alto desempenho.",
+      "quantity": 20
+    },
+    {
+      "id": 6,
+      "name": "iPad Pro 12 (Wi-Fi, 128 GB) - Space Gray",
+      "price": 4700,
+      "pictures": ["./assets/imgs/ipad_pro_12.jpeg"],
+      "description": "O iPad Pro é o aparelho mais veloz da categoria. Ele foi criado para aproveitar o salto de desempenho e as tecnologias exclusivas do M1, como o processador de imagem avançado e a arquitetura de memória unificada. Com a eficiência energética do chip M1, o iPad Pro esbanja boa forma: é fino, leve e tem bateria para o dia todo. Tão potente quanto portátil.",
+      "quantity": 3
+    }
+  ]
+}
