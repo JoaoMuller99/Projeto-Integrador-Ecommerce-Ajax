@@ -1,0 +1,37 @@
+body > header {
+  padding: 0rem var(--padding-x-desktop);
+}
+
+/* STYLES NAV */
+header > nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > nav > a,
+header > nav > button {
+  font-size: 1.1rem;
+  color: var(--font-color);
+}
+
+header > nav > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* TABLET STYLES */
+@media screen and (max-width: 1124px) {
+  body > header {
+    padding: 0rem var(--padding-x-talet);
+  }
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 568px) {
+  body > header {
+    padding: 0rem var(--padding-x-mobile);
+  }
+}
