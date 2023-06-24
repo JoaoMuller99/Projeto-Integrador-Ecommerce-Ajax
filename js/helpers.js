@@ -1,4 +1,4 @@
-function ajaxCall(endpoint, method = "GET", aditionlOptions) {
+export function ajaxCall(endpoint, method = "GET", aditionlOptions) {
   return new Promise((resposta) =>
     $.ajax({
       url: `http://localhost:3000${endpoint}`,
@@ -16,14 +16,14 @@ function ajaxCall(endpoint, method = "GET", aditionlOptions) {
   );
 }
 
-function formataNumeroParaBRL(numero) {
+export function formataNumeroParaBRL(numero) {
   return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(numero);
 }
 
-function showLoader() {
+export function showLoader() {
   $("#loader-container").css("display", "flex");
 }
 
-function hideLoader() {
+export function hideLoader() {
   setTimeout(() => $("#loader-container").hide(), 500);
 }
