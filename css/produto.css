@@ -1,0 +1,110 @@
+/* STYLES HERO CONTAINER */
+main > #hero-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 3.125rem;
+}
+
+/* STYLES IMG-CONTAINER E INFO-PRODUTO-CONTAINER */
+main > #hero-container > .img-container,
+main > #hero-container > .info-produto-container {
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+main > #hero-container > .img-container > img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+main > #hero-container > .info-produto-container > h5,
+main > #hero-container > .info-produto-container > p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.9375rem;
+}
+
+main > #hero-container > .info-produto-container > p {
+  font-weight: normal;
+}
+
+main > #hero-container > .info-produto-container > #price {
+  color: var(--font-color-price);
+}
+
+main > #hero-container > .info-produto-container > .seletor-quantidade-container {
+  display: flex;
+  align-items: center;
+  margin: 3.125rem 0;
+  gap: 1.25rem;
+  font-size: 1rem;
+}
+
+main > #hero-container > .info-produto-container > .seletor-quantidade-container > span {
+  min-width: 1.25rem;
+  text-align: center;
+}
+
+main > #hero-container > .info-produto-container > .seletor-quantidade-container > button {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--bg-btn-altera-quantidade);
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: opacity 275ms ease-out;
+}
+
+main > #hero-container > .info-produto-container > .seletor-quantidade-container > button:hover {
+  opacity: 0.9;
+}
+
+main > #hero-container > .info-produto-container > .seletor-quantidade-container > button > span {
+  transform: translate(0.2px, -2px);
+}
+
+main > #hero-container > .info-produto-container > #btn-adicionar-carrinho {
+  width: 100%;
+  background: var(--bg-btn-adicionar-carrinho);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  transition: opacity 275ms ease-out;
+}
+
+main > #hero-container > .info-produto-container > #btn-adicionar-carrinho:hover {
+  opacity: 0.9;
+}
+
+/* TABLET STYLES */
+@media screen and (max-width: 1124px) {
+  main > #hero-container {
+    flex-direction: column;
+  }
+
+  main > #hero-container > .img-container,
+  main > #hero-container > .info-produto-container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+  main > #hero-container > .img-container,
+  main > #hero-container > .info-produto-container {
+    max-width: 100%;
+    margin: 0;
+  }
+}

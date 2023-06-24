@@ -1,7 +1,3 @@
-body > header {
-  padding: 0rem var(--padding-x-desktop);
-}
-
 /* STYLES NAV */
 header > nav {
   min-height: 10vh;
@@ -20,18 +16,4 @@ header > nav > button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-/* TABLET STYLES */
-@media screen and (max-width: 1124px) {
-  body > header {
-    padding: 0rem var(--padding-x-talet);
-  }
-}
-
-/* MOBILE STYLES */
-@media screen and (max-width: 568px) {
-  body > header {
-    padding: 0rem var(--padding-x-mobile);
-  }
 }

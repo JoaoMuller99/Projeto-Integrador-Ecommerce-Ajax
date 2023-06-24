@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/produto.css" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>iPad Store - Produto</title>
   </head>
@@ -25,10 +26,29 @@
     <!-- HEADER -->
     <header>
       <nav>
-        <a href="/">iPad Store</a>
+        <a href="./index.html">iPad Store</a>
         <button id="button-carrinho" type="button">Carrinho</button>
       </nav>
     </header>
+
+    <main>
+      <section id="hero-container">
+        <div class="img-container"><img src="" alt="" /></div>
+        <div class="info-produto-container">
+          <h5></h5>
+          <p id="description"></p>
+          <p id="price"></p>
+          <p id="estoque">Em estoque: <span></span></p>
+          <div class="seletor-quantidade-container">
+            <p>Quantidade</p>
+            <button type="button" id="btn-menos"><span>-</span></button>
+            <span></span>
+            <button type="button" id="btn-mais"><span>+</span></button>
+          </div>
+          <button type="button" id="btn-adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+      </section>
+    </main>
 
     <!-- JQUERY -->
     <script

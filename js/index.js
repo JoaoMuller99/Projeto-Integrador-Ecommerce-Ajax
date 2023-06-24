@@ -14,7 +14,7 @@ $(() => {
 
     resultado.data.forEach((produto) => {
       const html = `<div class="card-produto">
-                      <a href="/produto.html#${produto.id}">
+                      <a href="./produto.html#${produto.id}">
                         <div>
                           <img src="${produto.pictures[0]}" alt="${produto.name}" />
                         </div>
