@@ -14,14 +14,14 @@ npm install --global http-server
 ```
 
 3. Com o pacote instalado, acesse, pelo terminal, a pasta onde seu projeto está armazenado.
-4. Feito isso, rode o seguinte comando, no seu terminal, para ativar nosso back-end.
+4. Feito isso, rode o seguinte comando para ativar nosso back-end.
 
 ```bash
 json-server --watch db/db.json
 ```
 
 5. Agora que o back-end está rodando, acesse novamente, em uma nova aba no seu terminal, a pasta onde seu projeto está armazenado.
-6. Feito isso, rode o seguinte comando, no seu terminal, para ativar nosso front-end.
+6. Feito isso, rode o seguinte comando para ativar nosso front-end.
 
 ```bash
 http-server .
