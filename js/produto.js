@@ -1,5 +1,6 @@
 import { adicionarItemAoCarrinho } from "./carrinho.js";
-import { ajaxCall, formataNumeroParaBRL, hideLoader } from "./helpers.js";
+import { formataNumeroParaBRL, hideLoader } from "./helpers.js";
+import { getSingleProduct } from "./interface_ws.js";
 import { ativaToastErro } from "./toasts.js";
 
 window.item = null;
@@ -22,7 +23,7 @@ async function preencherTela() {
     return;
   }
 
-  const resultado = await ajaxCall(`/products/${idProduto}`);
+  const resultado = await getSingleProduct(idProduto);
 
   if (resultado.temErro) {
     ativaToastErro("Erro ao carregar informações do produto!");

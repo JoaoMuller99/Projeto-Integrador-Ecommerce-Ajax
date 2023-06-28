@@ -1,0 +1,93 @@
+/* STYLES CARRINHO */
+
+#carrinho-container {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+#carrinho-container > .bg-fundo-carrinho {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 600ms ease-out;
+}
+
+#carrinho-container > section {
+  position: fixed;
+  height: 100%;
+  width: 40vw;
+  top: 0;
+  right: 0;
+  background-color: var(--bg-principal);
+  animation: slideIn 500ms ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+#carrinho-container > section #btn-fechar-carrinho {
+  all: unset;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#carrinho-container > section > #carrinho-itens-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+#carrinho-container > section > #carrinho-itens-container > #nenhum-item {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#carrinho-container > section #btn-finalizar-compra {
+  background: var(--bg-btn-adicionar-carrinho);
+  padding: 0.7rem 2rem;
+  width: 100%;
+  color: white;
+  margin-top: 2rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* TABLET STYLES */
+@media screen and (max-width: 1124px) {
+  #carrinho-container > section {
+    width: 50vw;
+  }
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 568px) {
+  #carrinho-container > section {
+    width: 100vw;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

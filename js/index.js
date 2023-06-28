@@ -1,4 +1,5 @@
-import { ajaxCall, formataNumeroParaBRL, hideLoader } from "./helpers.js";
+import { formataNumeroParaBRL, hideLoader } from "./helpers.js";
+import { getAllProducts } from "./interface_ws.js";
 import { ativaToastErro } from "./toasts.js";
 
 $(() => {
@@ -8,7 +9,7 @@ $(() => {
 });
 
 async function preencherTela() {
-  const resultado = await ajaxCall("/products");
+  const resultado = await getAllProducts();
 
   if (resultado.temErro) {
     ativaToastErro("Erro ao carregar informações dos produtos!");

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/carrinho.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <!-- TOASTIFY.JS -->
@@ -38,6 +39,21 @@
       <section class="hero-container"></section>
     </main>
 
+    <!-- CARRINHO -->
+    <section id="carrinho-container">
+      <div class="bg-fundo-carrinho"></div>
+      <section>
+        <header>
+          <button type="button" id="btn-fechar-carrinho">Fechar</button>
+        </header>
+        <main id="carrinho-itens-container"></main>
+        <footer>
+          <p>Subtotal: <span id="subtotal"></span></p>
+          <button type="button" id="btn-finalizar-compra">Finalizar compra</button>
+        </footer>
+      </section>
+    </section>
+
     <!-- JQUERY -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -46,10 +62,6 @@
     ></script>
     <!-- TOASTIFY.JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!-- TOASTS.JS -->
-    <script type="module" src="./js/toasts.js"></script>
-    <!-- HELPERS.JS -->
-    <script type="module" src="./js/helpers.js"></script>
     <!-- CARRINHO.JS -->
     <script type="module" src="./js/carrinho.js"></script>
     <!-- INDEX.JS -->
