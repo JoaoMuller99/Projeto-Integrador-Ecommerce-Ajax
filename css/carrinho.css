@@ -1,5 +1,4 @@
 /* STYLES CARRINHO */
-
 #carrinho-container {
   position: fixed;
   inset: 0;
@@ -10,17 +9,19 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  animation: fadeIn 600ms ease-out;
+  animation: fadeIn 500ms ease-out;
 }
 
 #carrinho-container > section {
   position: fixed;
   height: 100%;
   width: 40vw;
+  min-width: 37.5rem;
+  max-width: 43.75rem;
   top: 0;
   right: 0;
   background-color: var(--bg-principal);
-  animation: slideIn 500ms ease-out;
+  animation: slideIn 400ms ease-out;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -36,6 +37,8 @@
 #carrinho-container > section > #carrinho-itens-container {
   flex-grow: 1;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #carrinho-container > section > #carrinho-itens-container > #nenhum-item {
@@ -48,22 +51,54 @@
   font-size: 1.1rem;
 }
 
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--bg-card-produto);
+  padding: 1rem;
+  margin: 2rem 0rem;
+  min-height: 8.6875rem;
+}
+
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho > img {
+  width: 10rem;
+  border-radius: 6px;
+}
+
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1rem;
+}
+
 #carrinho-container > section #btn-finalizar-compra {
-  background: var(--bg-btn-adicionar-carrinho);
-  padding: 0.7rem 2rem;
   width: 100%;
+  background: var(--bg-btn-adicionar-carrinho);
+  border: none;
   color: white;
   margin-top: 2rem;
-  border: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   border-radius: 6px;
+  padding: 0.5rem 0rem;
   cursor: pointer;
+  transition: opacity 275ms ease-out;
+}
+
+#carrinho-container > section #btn-finalizar-compra:hover {
+  opacity: 0.9;
 }
 
 /* TABLET STYLES */
 @media screen and (max-width: 1124px) {
   #carrinho-container > section {
-    width: 50vw;
+    width: 70vw;
+    min-width: 31.25rem;
   }
 }
 
@@ -71,6 +106,17 @@
 @media screen and (max-width: 568px) {
   #carrinho-container > section {
     width: 100vw;
+    min-width: unset;
+  }
+
+  #carrinho-container > section > #carrinho-itens-container > .item-carrinho {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #carrinho-container > section > #carrinho-itens-container > .item-carrinho > img {
+    width: 12rem;
+    margin: 0 auto;
   }
 }
 

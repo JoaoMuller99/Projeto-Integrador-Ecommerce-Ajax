@@ -36,7 +36,7 @@
 
     <main>
       <section id="hero-container">
-        <div class="img-container"><img src="" alt="" /></div>
+        <div class="img-container"><img src="" loading="lazy" alt="" /></div>
         <div class="info-produto-container">
           <h5></h5>
           <p id="description"></p>
@@ -52,6 +52,21 @@
         </div>
       </section>
     </main>
+
+    <!-- CARRINHO -->
+    <section id="carrinho-container">
+      <div class="bg-fundo-carrinho"></div>
+      <section>
+        <header>
+          <button type="button" id="btn-fechar-carrinho">Fechar</button>
+        </header>
+        <main id="carrinho-itens-container"></main>
+        <footer>
+          <p>Subtotal: <span id="subtotal"></span></p>
+          <button type="button" id="btn-finalizar-compra">Finalizar compra</button>
+        </footer>
+      </section>
+    </section>
 
     <!-- JQUERY -->
     <script

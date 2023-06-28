@@ -20,7 +20,14 @@ $(() => {
         $("#carrinho-container #subtotal").text(formataNumeroParaBRL(0));
       } else {
         window.itensCarrinho.forEach((item) => {
-          const html = ``;
+          const html = `<div class="item-carrinho">
+                          <img src="${item.pictures[0]}" loading="lazy" alt="${item.name}" />
+                          <div>
+                            <h3>${item.name}</h3>
+                            <h3>${formataNumeroParaBRL(item.price * item.quantity)}</h3>
+                            <p>Quantidade: <span>${item.quantity}</span></p>
+                          </div>
+                        </div>`;
           $("#carrinho-itens-container").append(html);
         });
         $("#carrinho-container #subtotal").text(

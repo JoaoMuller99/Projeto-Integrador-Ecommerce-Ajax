@@ -21,7 +21,7 @@ async function preencherTela() {
     const html = `<div class="card-produto">
                     <a href="./produto.html#${produto.id}">
                       <div>
-                        <img src="${produto.pictures[0]}" alt="${produto.name}" />
+                        <img src="${produto.pictures[0]}" loading="lazy" alt="${produto.name}" />
                       </div>
                     </a>
                     <div class="card-produto-precos">
