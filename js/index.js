@@ -1,6 +1,6 @@
 import { formataNumeroParaBRL, hideLoader } from "./helpers.js";
 import { getAllProducts } from "./interface_ws.js";
-import { ativaToastCarrinho, ativaToastErro } from "./toasts.js";
+import { ativaToastErro, ativaToastSucesso } from "./toasts.js";
 
 $(() => {
   $(document).ready(() => {
@@ -9,7 +9,7 @@ $(() => {
     hideLoader();
 
     if (sessionStorage.getItem("sucesso-compra") === "true") {
-      setTimeout(() => ativaToastCarrinho("Compra efetuada com sucesso"), 1000);
+      setTimeout(() => ativaToastSucesso("Compra efetuada com sucesso"), 1000);
       sessionStorage.removeItem("sucesso-compra");
     }
   });
@@ -20,7 +20,6 @@ async function preencherTela() {
 
   if (resultado.temErro) {
     ativaToastErro("Erro ao carregar informações dos produtos!");
-
     return;
   }
 
@@ -30,7 +29,7 @@ async function preencherTela() {
     const html = `<div class="card-produto">
                     <a href="./produto.html#${produto.id}">
                       <div>
-                        <img src="${produto.pictures[0]}" loading="lazy" alt="${produto.name}" />
+                        <img src="${produto.picture}" loading="lazy" alt="${produto.name}" />
                       </div>
                     </a>
                     <div class="card-produto-precos">

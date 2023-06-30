@@ -8,9 +8,12 @@ header > nav {
 
 header > nav > div {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-header > nav > div #voltar {
+header > nav > div #button-voltar {
   all: unset;
   position: absolute;
   left: 0;
@@ -19,11 +22,14 @@ header > nav > div #voltar {
 }
 
 header > nav a,
+header > nav #button-admin,
 header > nav #button-carrinho {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--font-color);
+  text-decoration: none;
 }
 
+header > nav #button-admin,
 header > nav #button-carrinho {
   background-color: transparent;
   border: none;

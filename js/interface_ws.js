@@ -26,6 +26,14 @@ export async function getSingleProduct(idProduto) {
   return await ajaxCall(`${url}/${idProduto}`);
 }
 
+export async function addSingleProduct(item) {
+  return await ajaxCall(`${url}`, "POST", { data: JSON.stringify(item) });
+}
+
 export async function updateSingleProduct(item) {
   return await ajaxCall(`${url}/${item.id}`, "PUT", { data: JSON.stringify(item) });
+}
+
+export async function deleteSingleProduct(idProduto) {
+  return await ajaxCall(`${url}/${idProduto}`, "DELETE");
 }

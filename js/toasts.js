@@ -11,7 +11,7 @@ export function ativaToastErro(mensagem = "Erro") {
   }).showToast();
 }
 
-export function ativaToastCarrinho(mensagem = "") {
+export function ativaToastSucesso(mensagem = "") {
   Toastify({
     text: mensagem,
     duration: 3000,

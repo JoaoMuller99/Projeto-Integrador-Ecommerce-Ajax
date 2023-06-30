@@ -1,6 +1,6 @@
 import { formataNumeroParaBRL, hideLoader, showLoader } from "./helpers.js";
 import { getAllProducts, updateSingleProduct } from "./interface_ws.js";
-import { ativaToastCarrinho, ativaToastErro } from "./toasts.js";
+import { ativaToastErro, ativaToastSucesso } from "./toasts.js";
 
 window.itensCarrinho = null;
 const store = "itens-carrinho";
@@ -13,15 +13,19 @@ $(() => {
   });
 
   function criaEventos() {
+    // ? Evento btn carrinho
     $("#button-carrinho").on("click", () => {
       atualizaListagemCarrinho();
       $("#carrinho-container").show();
     });
 
+    // ? Evento fechar carrinho ao clicar no fundo escuro
     $(".bg-fundo-carrinho").on("click", fecharCarrinho);
 
+    // ? Evento fechar carrinho ao clicar no btn fechar
     $("#btn-fechar-carrinho").on("click", fecharCarrinho);
 
+    // ? Evento finalizar compra
     $("#btn-finalizar-compra").on("click", async () => {
       if (!window.itensCarrinho || window.itensCarrinho.length === 0) {
         ativaToastErro("Nenhum item no carrinho!");
@@ -46,7 +50,6 @@ $(() => {
             ativaToastErro(
               `O produto ${item.name} nao possui estoque suficiente! \n ${(produtoCarrinho || {}).quantity || 0} itens disponiveis`
             );
-            sucessoCompra = false;
             hideLoader();
             return false;
           }
@@ -79,7 +82,7 @@ export function adicionarItemAoCarrinho(itemAdicionar) {
   if (!window.itensCarrinho) {
     window.itensCarrinho = [itemAdicionar];
     setItensLocalStorage();
-    ativaToastCarrinho(mensagemItemAdicionado);
+    ativaToastSucesso(mensagemItemAdicionado);
     return;
   }
 
@@ -87,13 +90,13 @@ export function adicionarItemAoCarrinho(itemAdicionar) {
   if (itemExistente) {
     itemExistente.quantity = itemAdicionar.quantity;
     setItensLocalStorage();
-    ativaToastCarrinho(mensagemItemAdicionado);
+    ativaToastSucesso(mensagemItemAdicionado);
     return;
   }
 
   window.itensCarrinho.push(itemAdicionar);
   setItensLocalStorage();
-  ativaToastCarrinho(mensagemItemAdicionado);
+  ativaToastSucesso(mensagemItemAdicionado);
 }
 
 export function removeItemDoCarrinho(idItem) {
@@ -134,7 +137,7 @@ function atualizaListagemCarrinho() {
   } else {
     window.itensCarrinho.forEach((item) => {
       const html = `<div class="item-carrinho">
-                    <img src="${item.pictures[0]}" loading="lazy" alt="${item.name}" />
+                    <img src="${item.picture}" loading="lazy" alt="${item.name}" />
                     <div>
                       <h3>${item.name}</h3>
                       <h3>${formataNumeroParaBRL(item.price * item.quantity)}</h3>

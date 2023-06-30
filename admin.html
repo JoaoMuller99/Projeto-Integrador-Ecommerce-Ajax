@@ -8,8 +8,133 @@
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/carrinho.css" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <!-- TOASTIFY.JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <title>iPad Store - Admin</title>
   </head>
-  <body></body>
+  <body>
+    <!-- LOADER -->
+    <div id="loader-container">
+      <div id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <div>
+          <a href="./index.html">iPad Store</a>
+          <button id="button-voltar" type="button">&#8592; Voltar</button>
+        </div>
+        <div>
+          <a href="./admin.html" id="button-admin">Admin</a>
+          <button id="button-carrinho" type="button">Carrinho</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero-container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="fw-bolder">Nome</th>
+              <th class="text-center fw-bolder">Preço</th>
+              <th class="text-center fw-bolder">Estoque</th>
+              <th class="text-center fw-bolder">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="container-produtos"></tbody>
+        </table>
+        <button type="button" id="btn-adicionar-produto" class="btn btn-dark w-100 fw-bolder">Adicionar produto</button>
+      </section>
+    </main>
+
+    <!-- CARRINHO -->
+    <section id="carrinho-container">
+      <div class="bg-fundo-carrinho"></div>
+      <section>
+        <header>
+          <button type="button" id="btn-fechar-carrinho">Fechar</button>
+        </header>
+        <main id="carrinho-itens-container"></main>
+        <footer>
+          <p>Subtotal: <span id="subtotal"></span></p>
+          <button type="button" id="btn-finalizar-compra">Finalizar compra</button>
+        </footer>
+      </section>
+    </section>
+
+    <div class="modal fade" id="modal-produto-container" tabindex="-1" aria-labelledby="modal-produto" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-produto"><span></span> produto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form-produto">
+              <div class="mb-2">
+                <label for="nome-produto" class="col-form-label">Nome:</label>
+                <input type="text" minlength="1" class="form-control" id="nome-produto" required />
+              </div>
+              <div class="mb-2">
+                <label for="preco-produto" class="col-form-label">Preço:</label>
+                <input type="number" min="0" class="form-control" id="preco-produto" required />
+              </div>
+              <div class="mb-2">
+                <label for="descricao-produto" class="col-form-label">Descrição:</label>
+                <textarea class="form-control" minlength="10" id="descricao-produto" required></textarea>
+              </div>
+              <div class="mb-2">
+                <label for="estoque-produto" class="col-form-label">Estoque:</label>
+                <input type="number" min="0" class="form-control" id="estoque-produto" required />
+              </div>
+              <div class="mb-2">
+                <label for="imagens-produto" class="col-form-label">Link imagem:</label>
+                <input type="text" minlength="1" class="form-control" id="imagens-produto" required />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" form="form-produto" id="btn-salvar-item" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+    <!-- TOASTIFY.JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- GLOBAL.JS -->
+    <script type="module" src="./js/global.js"></script>
+    <!-- CARRINHO.JS -->
+    <script type="module" src="./js/carrinho.js"></script>
+    <!-- ADMIN.JS -->
+    <script type="module" src="./js/admin.js"></script>
+  </body>
 </html>

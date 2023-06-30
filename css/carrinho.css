@@ -77,6 +77,11 @@
   font-size: 1rem;
 }
 
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho > div > h3 {
+  font-size: inherit;
+  font-weight: 600;
+}
+
 #carrinho-container > section > #carrinho-itens-container > .item-carrinho > div > div {
   display: flex;
   align-items: center;
