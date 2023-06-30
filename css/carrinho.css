@@ -70,10 +70,29 @@
 }
 
 #carrinho-container > section > #carrinho-itens-container > .item-carrinho > div {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-size: 1rem;
+}
+
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho > div > div > button {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: color 175ms ease-in-out;
+}
+
+#carrinho-container > section > #carrinho-itens-container > .item-carrinho > div > div > button:hover {
+  color: cadetblue;
 }
 
 #carrinho-container > section #btn-finalizar-compra {
