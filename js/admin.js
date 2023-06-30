@@ -5,8 +5,14 @@ import { ativaToastErro, ativaToastSucesso } from "./toasts.js";
 $(() => {
   window.produtos = [];
   const modal = new bootstrap.Modal("#modal-produto-container");
+  const senhasAceitas = ["Esse projeto vale um 10", "The winter is coming", "admin"];
 
   $(document).ready(() => {
+    const senha = prompt("Digite a senha:");
+    if (!senhasAceitas.includes(senha)) {
+      window.location.href = "./index.html";
+      return;
+    }
     preencherTela();
   });
 
