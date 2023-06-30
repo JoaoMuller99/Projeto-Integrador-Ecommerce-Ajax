@@ -32,6 +32,8 @@ async function preencherTela() {
     return;
   }
 
+  document.title = document.title.split("-")[0] + "- " + resultado.data.name;
+
   $(".img-container > img").attr("src", resultado.data.pictures[0]).attr("alt", resultado.data.name);
   $(".info-produto-container > h5").text(resultado.data.name);
   $(".info-produto-container > #description").text(resultado.data.description);
@@ -46,6 +48,8 @@ async function preencherTela() {
 }
 
 function criarEventos() {
+  $("#voltar").on("click", () => history.back());
+
   // ? Evento btn menos quantidade
   $("#btn-menos").on("click", () => {
     if (window.quantidadeSelecionada === 1) return;
