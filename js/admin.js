@@ -44,6 +44,7 @@ $(() => {
   }
 
   function criaEventos() {
+    // ? Evento adicionar produto
     $("#btn-adicionar-produto")
       .off()
       .on("click", async () => {
